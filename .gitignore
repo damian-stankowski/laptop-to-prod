@@ -1,0 +1,6 @@
+# Downloaded installer images (large, reproducible with `make image`)
+images/downloads/*
+!images/downloads/.gitkeep
+
+# OS / editor noise
+.DS_Store

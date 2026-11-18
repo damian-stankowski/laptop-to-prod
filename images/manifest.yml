@@ -1,0 +1,27 @@
+release:
+  distribution: debian
+  codename: trixie
+  version: "13.7.0"
+  type: netinst
+
+source:
+  mirrors:
+    - https://ftp.uvigo.es/debian-cd
+    - https://cdimage.debian.org/debian-cd
+    - https://cdimage.debian.org/cdimage/archive
+  path: "{version}/{arch}/iso-cd"
+  filename: "{distribution}-{version}-{arch}-{type}.iso"
+  checksums: SHA256SUMS
+  signature: SHA256SUMS.sign
+
+trusted_keys:
+  - fingerprint: DF9B9C49EAA9298432589D76DA87E80D6294BE9B
+    file: keys/debian-cd-2011.asc
+  - fingerprint: 10460DAD76165AD81FBC0CE9988021A964E6EA7D
+    file: keys/debian-cd-2009.asc
+
+architectures:
+  amd64:
+    sha256: a7ef94ac2fb9a7fec454552abd629b7cc9d5155c886165a45649f5ce6167e355
+  arm64:
+    sha256: 6e93fa1759bd9d4b0fc11e938987de6967ee7de5297dac1be27c3a75cc17024b
